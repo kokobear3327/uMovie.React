@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import {
     POPULAR_BASE_URL,
     SEARCH_BASE_URL,
-    POSTER_SIZE,
-    BACKDROP_SIZE,
-    IMAGE_BASE_URL,
+    API_URL, 
+    API_KEY, 
+    IMAGE_BASE_URL, 
+    BACKDROP_SIZE, 
+    POSTER_SIZE 
   } from '../config';
   
 // import Components
@@ -27,14 +29,24 @@ const Home = () => {
         setLoading(true);
         try {
             const result = await (await fetch(endpoint)).json();
-            setState(prev => {
+            console.log(result)
+            setState(prev => ({
                 ...prev,
+                movies: [...result.results],
+                heroImage: prev.heroImage || result.results[0],
+                currentPage: result.page,
+                totalPages: result.total_pages
             }));
         } catch (error) {
-        
+            setError(true);
+            console.log(error);
         }
         setLoading(false);
     }
+
+    useEffect(() => {
+        fetchMovies(`${API_URL}movie/popular?api_key=${API_KEY}`);
+    }, [ ])
 
     return (
         <>
