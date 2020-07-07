@@ -6,15 +6,16 @@ import { StyledSearchBar, StyledSearchBarContent } from '../styles/StyledSearchB
 const SearchBar = ({ callback }) => {
     const [state, setState] = useState('');
     const timeOut = useRef(null);
-
+  
     const doSearch = event => {
-        const { value } = event.target;
-        clearTimeout(timeOut.current);
-        setState(value);
-
-        timeOut.current = setTimeout(() => {
-            callback(value);
-        }, 500);
+      const { value } = event.target;
+      
+      clearTimeout(timeOut.current);
+      setState(value);
+  
+      timeOut.current = setTimeout(() => {
+        callback(value);
+      }, 500);
     }
 
     return (

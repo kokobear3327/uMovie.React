@@ -31,8 +31,10 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const searchMovies = search => {
-
-      
+    const endpoint = search ? SEARCH_BASE_URL + search : POPULAR_BASE_URL;
+  
+    setSearchTerm(search);
+    fetchMovies(endpoint);
   }
 
   const loadMoreMovies = () => {
@@ -50,12 +52,14 @@ const Home = () => {
   
     return (
         <>
+        {!searchTerm && (
         <HeroImage 
             image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${heroImage.backdrop_path}`}    
             title={heroImage.original_title}
             text={heroImage.overview}
             />
-        <SearchBar />
+        )}
+        <SearchBar callback={searchMovies} />
         <Grid header={searchTerm ? 'Search Result' : 'Popular Movies'}>
           {movies.map(movie =>(
             <MovieThumb
