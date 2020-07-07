@@ -3,7 +3,7 @@ import {
     POPULAR_BASE_URL,
     SEARCH_BASE_URL,
     API_URL, 
-    API_KEY, 
+    API_KEY,
     IMAGE_BASE_URL, 
     BACKDROP_SIZE, 
     POSTER_SIZE 
@@ -30,6 +30,15 @@ const Home = () => {
    }, fetchMovies] = useHomeFetch();
   const [searchTerm, setSearchTerm] = useState('');
 
+  const loadMoreMovies = () => {
+    const searchEndpoint = `${SEARCH_BASE_URL}${searchTerm}&page=${currentPage + 1}`;
+    const popularEndpoint = `${POPULAR_BASE_URL}&page=${currentPage + 1}`;
+
+    const endpoint = searchTerm ? searchEndpoint : popularEndpoint;
+
+    fetchMovies(endpoint);
+
+  }
   
   if (error) return <div>Something went wrong ...</div>;
   if (!movies[0]) return <Spinner />
@@ -58,9 +67,10 @@ const Home = () => {
               ))}
 
         </Grid> 
-        <MovieThumb />
-        <Spinner />
-        <LoadMoreBtn />
+        {loading && <Spinner />}
+        {currentPage < totalPages && !loading && (
+          <LoadMoreBtn text="Load More" callback={loadMoreMovies} />
+        )}
     </>
     )
 }
