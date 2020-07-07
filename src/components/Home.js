@@ -30,6 +30,11 @@ const Home = () => {
    }, fetchMovies] = useHomeFetch();
   const [searchTerm, setSearchTerm] = useState('');
 
+  const searchMovies = search => {
+
+      
+  }
+
   const loadMoreMovies = () => {
     const searchEndpoint = `${SEARCH_BASE_URL}${searchTerm}&page=${currentPage + 1}`;
     const popularEndpoint = `${POPULAR_BASE_URL}&page=${currentPage + 1}`;
