@@ -5,7 +5,7 @@ import { calcTime, convertMoney } from '../../helpers';
 
 import { StyledMovieInfoBar } from '../styles/StyledMovieInfoBar';
 
-const MovieInfoBar = ({ time, budget, revenue, tagline, status, release_date }) => (
+const MovieInfoBar = ({ time, budget, revenue, status, release_date, original_language, popularity, production_countries }) => (
   <StyledMovieInfoBar>
 
   
@@ -35,7 +35,7 @@ const MovieInfoBar = ({ time, budget, revenue, tagline, status, release_date }) 
     <div className="movieinfobar-content-col">
     <FontAwesome className="fa-budget" name="money" size="2x" />
     <span className="movieinfobar-info">
-      Budget: {convertMoney(budget)}
+      Original_Language: {original_language}
     </span>
   </div>
 
@@ -43,42 +43,25 @@ const MovieInfoBar = ({ time, budget, revenue, tagline, status, release_date }) 
   <div className="movieinfobar-content-col">
   <FontAwesome className="fa-budget" name="money" size="2x" />
   <span className="movieinfobar-info">
-    Budget: {convertMoney(budget)}
+    Popularity: {popularity}
   </span>
 </div>
 
 <div className="movieinfobar-content-col">
-<FontAwesome className="fa-budget" name="money" size="2x" />
+<FontAwesome className="fa-revenue" name="ticket" size="2x" />
 <span className="movieinfobar-info">
-  Budget: {convertMoney(budget)}
-</span>
-</div>
-
-
-<div className="movieinfobar-content-col">
-<FontAwesome className="fa-budget" name="money" size="2x" />
-<span className="movieinfobar-info">
-Budget: {convertMoney(budget)}
+  Revenue: {convertMoney(revenue)}
 </span>
 </div>
 
 
 
-    <div className="movieinfobar-content-col">
-    <FontAwesome className="fa-budget" name="money" size="2x" />
-    <span className="movieinfobar-info">
-      Budget: {convertMoney(budget)}
-    </span>
-  </div>
 
 
 
-      <div className="movieinfobar-content-col">
-        <FontAwesome className="fa-revenue" name="ticket" size="2x" />
-        <span className="movieinfobar-info">
-          Revenue: {convertMoney(revenue)}
-        </span>
-      </div>
+
+
+
     </div>
   </StyledMovieInfoBar>
 );

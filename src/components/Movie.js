@@ -24,6 +24,11 @@ const Movie = ({ movieId }) => {
       time={movie.runtime}
       budget={movie.budget}
       revenue={movie.revenue}
+      status={movie.status}
+      release_date={movie.release_date}
+      original_language={movie.original_language}
+      popularity={movie.popularity}
+      production_countries={movie.production_countries}
     />
     <Grid header="Actors">
       {movie.actors.map(actor => (
