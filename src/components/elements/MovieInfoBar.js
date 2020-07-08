@@ -8,7 +8,7 @@ import { StyledMovieInfoBar } from '../styles/StyledMovieInfoBar';
 const MovieInfoBar = ({ time, budget, revenue, tagline, status, release_date }) => (
   <StyledMovieInfoBar>
 
-
+  
     <div className="movieinfobar-content">
       <div className="movieinfobar-content-col">
         <FontAwesome className="fa-time" name="clock-o" size="2x" />
@@ -27,7 +27,7 @@ const MovieInfoBar = ({ time, budget, revenue, tagline, status, release_date }) 
       <div className="movieinfobar-content-col">
       <FontAwesome className="fa-budget" name="money" size="2x" />
       <span className="movieinfobar-info">
-        Budget: {convertMoney(budget)}
+        Release Date: {release_date}
       </span>
     </div>
 
@@ -90,3 +90,4 @@ MovieInfoBar.propTypes = {
 }
 
 export default MovieInfoBar;
+
