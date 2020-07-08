@@ -18,14 +18,14 @@ const MovieInfoBar = ({ time, budget, revenue, status, release_date, original_la
       </div>
 
       <div className="movieinfobar-content-col">
-        <FontAwesome className="fa-budget" name="money" size="2x" />
+        <FontAwesome className="fa-budget" name="thermometer-full" size="2x" />
         <span className="movieinfobar-info">
-          status: {status}
+              &nbsp;&nbsp;  status: {status}
         </span>
       </div>
 
       <div className="movieinfobar-content-col">
-      <FontAwesome className="fa-budget" name="money" size="2x" />
+      <FontAwesome className="fa-budget" name="history" size="2x" />
       <span className="movieinfobar-info">
         Release Date: {release_date}
       </span>
@@ -33,7 +33,7 @@ const MovieInfoBar = ({ time, budget, revenue, status, release_date, original_la
 
 
     <div className="movieinfobar-content-col">
-    <FontAwesome className="fa-budget" name="money" size="2x" />
+    <FontAwesome className="fa-budget" name="globe" size="2x" />
     <span className="movieinfobar-info">
       Original_Language: {original_language}
     </span>
@@ -41,7 +41,7 @@ const MovieInfoBar = ({ time, budget, revenue, status, release_date, original_la
 
 
   <div className="movieinfobar-content-col">
-  <FontAwesome className="fa-budget" name="money" size="2x" />
+  <FontAwesome className="fa-budget" name="fire" size="2x" />
   <span className="movieinfobar-info">
     Popularity: {popularity}
   </span>
