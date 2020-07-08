@@ -33,9 +33,13 @@ export const StyledMovieInfo = styled.div`
 
   .movieinfo-text {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 40px;
+    padding: 20px;
     color: #fff;
     overflow: hidden;
+
+    .tagline {
+      font-style: italic;
+    }
 
     h1 {
       font-family: 'Abel', sans-serif;
@@ -50,7 +54,7 @@ export const StyledMovieInfo = styled.div`
     h3 {
       font-size: 16px;
       line-height: 0;
-      margin-top: 30px;
+      margin-top: 23px;
     }
 
     p {

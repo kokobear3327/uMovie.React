@@ -18,7 +18,7 @@ const MovieInfoBar = ({ time, budget, revenue, status, release_date, original_la
       </div>
 
       <div className="movieinfobar-content-col">
-        <FontAwesome className="fa-budget" name="thermometer-full" size="2x" />
+        <FontAwesome className="fa-time" name="thermometer-full" size="2x" />
         <span className="movieinfobar-info">
               &nbsp;&nbsp;  status: {status}
         </span>
