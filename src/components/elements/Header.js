@@ -1,6 +1,6 @@
 import React from 'react';
 import RMDBLogo from '../images/reactMovie_logo.png';
-import TMDBLogo from '../images/tmdb_logo.svg';
+import TMDBLogo from '../images/tmdb_logo.png';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
 
@@ -33,8 +33,8 @@ export const StyledRMDBLogo = styled.img`
 `;
 
 export const StyledTMDBLogo = styled.img`
-  width: 122px;
-  margin-top: 25px;
+  width: 182px;
+  margin-top: 18px;
   float: right;
 
   @media screen and (max-width: 500px) {
