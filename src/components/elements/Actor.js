@@ -17,7 +17,9 @@ const Actor = ({ actor }) => (
       alt="actorthumb"
     />
     <span className="actor-name">{actor.name}</span>
+    <span className="actor-playing"> Playing </span>
     <span className="actor-character">{actor.character}</span>
+    <span className="actor-gender">{actor.gender > 1 ? "male" : "female" }</span>
   </StyledActor>
 );
 
