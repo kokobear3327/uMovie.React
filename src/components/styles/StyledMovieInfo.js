@@ -32,17 +32,26 @@ export const StyledMovieInfo = styled.div`
   }
 
   .movieinfo-text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Orpheus Pro";
     padding: 20px;
     color: #fff;
     overflow: hidden;
 
+    .movietitle {
+      font-family: "Orpheus Pro";
+    }
+
+    .movieplot-paragraph {
+      font-family: "Orpheus Pro";
+    }
+
     .tagline {
+      font-family: "Orpheus Pro";
       font-style: italic;
     }
 
     h1 {
-      font-family: 'Abel', sans-serif;
+      font-family: "Orpheus Pro";
       font-size: 48px;
       margin: 0;
 
@@ -58,7 +67,7 @@ export const StyledMovieInfo = styled.div`
     }
 
     p {
-      font-family: 'Abel', sans-serif;
+      font-family: "Orpheus Pro";
       font-size: 18px;
       line-height: 26px;
     }
@@ -70,6 +79,7 @@ export const StyledMovieInfo = styled.div`
   }
 
   .score {
+    font-family: "Orpheus Pro";
     display: flex;
     align-items: center;
     justify-content: center;

@@ -15,7 +15,7 @@ export const StyledNavigation = styled.div`
     width: 100%;
 
     p {
-      font-family: 'Abel', sans-serif;
+      font-family: "Orpheus Pro";
       font-size: 22px;
       float: left;
       color: #fff;

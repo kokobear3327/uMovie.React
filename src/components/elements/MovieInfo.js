@@ -23,9 +23,9 @@ const MovieInfo = ({ movie }) => (
         />
       </div>
       <div className="movieinfo-text">
-        <h1>{movie.title}</h1>
+        <h1 className="movietitle">{movie.title}</h1>
         <h3>PLOT</h3>
-        <p>{movie.overview}</p>
+        <p className="movieplot-paragraph">{movie.overview}</p>
         <h3>TAGLINE</h3>
         <p className="tagline">{movie.tagline}</p>
         <h3>HOMEPAGE</h3>

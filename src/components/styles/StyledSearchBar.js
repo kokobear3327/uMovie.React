@@ -28,7 +28,7 @@ export const StyledSearchBarContent = styled.div`
   }
 
   input {
-    font-family: 'Abel', sans-serif;
+    font-family: "Orpheus Pro";
     font-size: 28px;
     position: absolute;
     left: 0px;

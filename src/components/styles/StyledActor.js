@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledActor = styled.div`
-  font-family: 'Abel', sans-serif;
+  font-family: "Orpheus Pro";
   color: #fff;
   background: #1c1c1c;
   border-radius: 49px;
